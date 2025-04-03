@@ -123,6 +123,10 @@
 </section>
 
 <section>
+	<img class="r-stretch" width="100%" src="/inc/ortac_overview.drawio-2.drawio-3.png" />
+</section>
+
+<section>
 	<h3>Stack (Excerpt)</h3>
 	<pre><code data-trim data-noescape data-line-numbers class="language-ocaml">
 		type 'a t
@@ -180,7 +184,7 @@
 		<li class="fragment fade-up">Generates code for RAC</li>
 		<li class="fragment fade-up">Needs a few additional libraries to link</li>
 		<ul>
-			<li class="fragment fade-up">Use dune plugin!</li>
+			<li class="fragment fade-up">dune plugin available</li>
 		</ul>
 		<li class="fragment fade-up">Can be easily integrated into CI</li>
 	</ul>
@@ -244,7 +248,7 @@
 		open Hashtbl
 		let protect f = try Ok (f ()) with e -> Error e
 		let sut0 = create ~random:false 16
-		let r = protect (fun () -> create true (-8))
+		let r = protect (fun () -> create ~random:true (-8))
 		assert (match r with
 					| Error (Invalid_argument _) -> true
 					| _ -> false)
@@ -260,10 +264,11 @@
 			<li class="fragment fade-up"><em>Hashtbl.create</em> (initial size guess can be negative)</li>
 		</ul>
 		<li class="fragment fade-up">1 bug in <em>Varray</em> library
-		<li class="fragment fade-up">5 bugs in <em>Bitv</em> library</li> 
+		<li class="fragment fade-up">7 bugs in <em>Bitv</em> library</li> 
 		<ul>
 			<li class="fragment fade-up">3 functions with possible integer overflow</li>
 			<li class="fragment fade-up">2 functions with possible division-by-zero</li>
+			<li class="fragment fade-up">2 functions throwing unexpected exceptions</li>
 		</ul>
 		<li class="fragment fade-up">...</li>
 	</ul>

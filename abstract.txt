@@ -1,0 +1,10 @@
+Albeit a functional language at its core, OCaml also offers
+many imperative features, making verification of software written in it
+challenging. The GOSPEL project equips OCaml with its own specification
+language, and opens the opportunity for different verification tools to be
+developed on top of it. In this talk, I will introduce one such tool, called
+ORTAC, which allows for automatically testing stateful OCaml programs against a
+reference model derived from GOSPEL specifications. I will also highlight some
+of my own contributions to the tool, and how they helped in discovering some
+deep-rooted bugs and inconsistencies in modules from the standard library, as
+well as in libraries from the OCaml package repository.
