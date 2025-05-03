@@ -37,8 +37,8 @@
 			<div class="slides">
 
 <section>
-	<h2>Dynamic Verification of OCaml Software</h2>
-	<p><em>Nikolaus Huber</em></p>
+	<p>Dynamic Verification of OCaml Software with Gospel and Ortac/QCheck-STM</p>
+	<p><small><em>Nikolaus Huber</em>, Naomi Spargo, Nicolas Osborne, Samuel Hym, Jan Midtgaard</p></small>
 	<div style="display:flex; flex-direction: row; justify-content: center; align-items: center; gap: 10%">
 		<img src="/inc/tarides_logo.png" width="20%"/>
 		<div width="10%"></div>
@@ -167,14 +167,14 @@
 				  | _ -> false *)
 	</code></pre>
 </section>
-<section>
+<!-- <section>
 	<h3>Configuration module</h3>
 	<pre class="OCaml"><code data-trim data-noescape data-line-numbers>
 		type sut = char Stack.t
 
 		let init_sut = Stack.create ()
 	</code></pre>
-</section>
+</section> -->
 <section>
 	<h3>Running Ortac/QCheck-STM</h3>
 	<pre class="fragment fade-up bash"><code data-trim data-noescape>
